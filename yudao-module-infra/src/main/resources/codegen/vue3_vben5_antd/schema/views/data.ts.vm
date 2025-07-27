@@ -426,9 +426,7 @@ export function use${subSimpleClassName}GridColumns(): VxeTableGridOptions<${sim
 #else
     #if ($subTable.subJoinMany) ## 一对多
     /** 新增/修改列表的字段 */
-    export function use${subSimpleClassName}GridEditColumns(
-        onActionClick?: OnActionClickFn<${simpleClassName}Api.${subSimpleClassName}>,
-    ): VxeTableGridOptions<${simpleClassName}Api.${subSimpleClassName}>['columns'] {
+    export function use${subSimpleClassName}GridEditColumns(): VxeTableGridOptions<${simpleClassName}Api.${subSimpleClassName}>['columns'] {
         return [
             #foreach($column in $subColumns)
                 #if ($column.createOperation || $column.updateOperation)
